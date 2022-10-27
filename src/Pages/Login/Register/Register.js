@@ -24,9 +24,8 @@ const Register = () => {
                 const user = resulte.user;
                 console.log(user)
                 setError('');
-
-                handleuserProfile(name, photoURL);
                 form.reset();
+                handleuserProfile(name, photoURL);
 
             })
             .catch(error => {

@@ -10,6 +10,7 @@ import { FaUser } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 import { GoogleAuthProvider } from 'firebase/auth';
+import './Header.css'
 
 const Header = () => {
     const { user, providerLogin, logout } = useContext(AuthContext)
@@ -30,7 +31,7 @@ const Header = () => {
     return (
         <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
             <Container>
-                <Navbar.Brand ><Link to='/'>Shofol Academy</Link></Navbar.Brand>
+                <Navbar.Brand ><Link to='/' className='logo-design'>Shofol Academy</Link></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
