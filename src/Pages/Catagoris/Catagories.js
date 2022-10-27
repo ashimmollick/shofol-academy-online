@@ -10,7 +10,7 @@ const Catagories = () => {
     console.log(news)
     return (
         <div>
-            <h2>catagories{news.length}</h2>
+            <h2 className='text-center mt-4'>Total Class :{news.length}</h2>
 
             <Container>
                 <Row>

@@ -17,7 +17,7 @@ const NewSummery = ({ clas }) => {
                     <Card.Text>
                         <h3>Price: {price}</h3>
                     </Card.Text>
-                    <Button variant="success"><Link to={`/classdescription/${_id}`}>Read More</Link></Button>
+                    <Button variant="success"><Link to={`/classdescription/${_id}`} className='text-white'>More description</Link></Button>
                 </Card.Body>
             </Card>
 

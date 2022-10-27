@@ -2,3 +2,16 @@ a.logo-design {
     text-decoration: none;
     font-weight: 700;
 }
+
+a {
+    text-decoration: none !important;
+
+}
+
+.heade-list a {
+    color: rgba(0, 0, 0, 0.55) !important;
+}
+
+.heade-list a:hover {
+    color: #0A58CA !important;
+}

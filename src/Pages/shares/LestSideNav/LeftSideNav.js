@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-
+import './leftSidenav.css'
 const LeftSideNav = () => {
     const [catagories, setCatagory] = useState([]);
     useEffect(() => {
@@ -10,11 +10,11 @@ const LeftSideNav = () => {
     }, [])
     return (
         <div>
-            <h3>Total Subjects: {catagories.length}</h3>
+            <h3 className='mt-2'>Total Couse: {catagories.length}</h3>
             <div>
                 {
                     catagories.map(catagory => <p key={catagory.id}>
-                        <Link to={`/catagory/${catagory.id}`}>{catagory.name}</Link>
+                        <Link className='classList' to={`/catagory/${catagory.id}`}>{catagory.name}</Link>
                     </p>)
                 }
 

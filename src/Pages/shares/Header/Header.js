@@ -34,19 +34,20 @@ const Header = () => {
                 <Navbar.Brand ><Link to='/' className='logo-design'>Shofol Academy</Link></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="me-auto">
-                        <Nav.Link href="#features">All Couses</Nav.Link>
+                    <Nav className="me-auto d-flex align-items-center heade-list">
+                        <Link className='me-2' href="#features">All Couses</Link>
                         <Link to="/blog">Blog</Link>
                         <Nav.Link href="#pricing">Courses</Nav.Link>
 
                     </Nav>
-                    <Nav>
+                    <Nav className='d-flex align-items-center'>
 
-                        {user?.photoURL ?
-                            <Image style={{ height: '30px' }} roundedCircle src={user?.photoURL}></Image>
-                            : <FaUser></FaUser>
-                        }
+
                         <>
+                            {user?.photoURL ?
+                                <Image className='me-2' style={{ height: '30px' }} roundedCircle src={user?.photoURL}></Image>
+                                : <FaUser></FaUser>
+                            }
                             {
                                 user?.uid ?
                                     <>
@@ -55,11 +56,13 @@ const Header = () => {
                                     </>
                                     :
                                     <>
-                                        <Link to='/login'>Login</Link>
+                                        <Link className='me-2' to='/login'>Login</Link>
                                         <Link to='/register'>Register</Link>
-                                        <Button onClick={handleGoogleSignIn} variant="light"><FcGoogle /></Button>
+
                                     </>
+
                             }
+                            <> <Button onClick={handleGoogleSignIn} variant="light"><FcGoogle /></Button></>
 
                         </>
 
