@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const LeftSideNav = () => {
     const [catagories, setCatagory] = useState([]);
     useEffect(() => {
-        fetch('https://shofol-server-ashimmollick.vercel.app/educations')
+        fetch('http://localhost:5000/news-catagories')
             .then(res => res.json())
             .then(data => setCatagory(data))
     }, [])
@@ -14,9 +14,10 @@ const LeftSideNav = () => {
             <div>
                 {
                     catagories.map(catagory => <p key={catagory.id}>
-                        <Link to={`/catagories/${catagory.id}`}>{catagory.name}</Link>
+                        <Link to={`/catagory/${catagory.id}`}>{catagory.name}</Link>
                     </p>)
                 }
+
             </div>
         </div>
     );
