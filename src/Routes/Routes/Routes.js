@@ -17,13 +17,13 @@ export const routes = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/news-catagories')
+                loader: () => fetch('https://shofol-server-ashimmollick.vercel.app/news-catagories')
 
             },
             {
                 path: '/catagory/:id',
                 element: <Catagories></Catagories>,
-                loader: ({ params }) => fetch(`http://localhost:5000/catagory/${params.id}`)
+                loader: ({ params }) => fetch(`https://shofol-server-ashimmollick.vercel.app/catagory/${params.id}`)
             },
             {
                 path: '/education/:id',
@@ -33,7 +33,7 @@ export const routes = createBrowserRouter([
             {
                 path: '/classdescription/:id',
                 element: <PrivateRoute><ClassDescription></ClassDescription></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/news/${params.id}`)
+                loader: ({ params }) => fetch(`https://shofol-server-ashimmollick.vercel.app/news/${params.id}`)
             },
             {
                 path: '/login',
