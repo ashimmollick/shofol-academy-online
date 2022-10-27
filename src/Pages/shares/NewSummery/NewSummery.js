@@ -5,6 +5,7 @@ import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 const NewSummery = ({ clas }) => {
     const { _id, title, price, image_url } = clas;
+
     return (
 
 
